@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Khai trương mùa du lịch Biển Đà Nẵng 2024 “Sóng mùa hè”",
+        "image": "https://i.imgur.com/5Cg4nh2.jpg",
+        "place": "Công viên Biển Đông",
+        "time": "26/04/2024",
+        "datepost":"26/04/2024",
+        "category": "Lễ hội - Vui chơi",
+        "content": "Với chủ đề “Sóng mùa hè”, chương trình có nhiều hoạt động hấp dẫn với mong muốn mang đến cho người dân, du khách có những trải nghiệm đáng nhớ. Bạn có thể trải nghiệm các trò chơi trên biển, xem triển lãm tượng cát nghệ thuật, thưởng thức các buổi trình diễn thể thao biển và nhiều giải đấu thể thao khác. Chuỗi các hoạt động tại bán đảo Sơn Trà gồm Trải nghiệm dù lượn Sơn Trà và trải nghiệm dù lượn có động cơ; triển lãm ảnh chủ đề “Khoảnh khắc Sơn Trà”; vẽ và triển lãm tranh chủ đề “Sơn Trà nhỏ của chúng ta”, workshop vẽ nón lá và túi canvas và tour trải nghiệm “Ngắm Vọoc chà vá chân nâu”."
+    },
+    {
+        "id": 2,
+        "title": "GIẢI CHẠY VNEXPRESS MARATHON DA NANG MIDNIGHT 2024",
+        "image": "https://i.imgur.com/17190QM.png",
+        "place": "Đà Nẵng",
+        "time": "14/07/2024",
+        "datepost":"26/04/2024",
+        "category": "Xã hội",
+        "content": "VNEXPRESS MARATHON GỌI TÊN THÀNH PHỐ THỨ 8: ĐÀ NẴNG Thành phố biển Đà Nẵng là điểm đến thứ 8 của VnExpress Marathon, hứa hẹn sở hữu cung đường chạy dọc biển làm “say lòng” tất cả các runner. Không cần phải nói nhiều khi Đà Nẵng được mệnh danh là thành phố đáng sống nhất Việt Nam, địa điểm du lịch được yêu thích đối với cả du khách trong và ngoài nước. Thành phố này chắc chắn sẽ khiến trải nghiệm tham gia một giải chạy của bạn không thể đặc biệt hơn."
+    },
+    {
+        "id": 3,
+        "title": "Lễ hội Quán Thế Âm Đà Nẵng Lễ hội tâm linh lớn bậc nhất",
+        "image": "https://i.imgur.com/3bCxzAz.jpg",
+        "place": "Khuôn viên Chùa Quán Thế Âm",
+        "time": "10/03/2023",
+        "datepost":"26/04/2024",
+        "category": "Văn hóa",
+        "content": "Khởi động mùa du lịch năm nay với lễ hội Quán Thế Âm, một trong những hoạt động tâm linh lớn nhất tại thành phố."
+    },
+    {
+        "id": 4,
+        "title": "Đà Nẵng sẵn sàng cho Đại hội Thể thao học sinh Đông Nam Á lần thứ 13",
+        "image": "https://i.imgur.com/b07od29.jpg",
+        "place": "Đà Nẵng",
+        "time": "31/05/2024",
+        "datepost":"26/04/2024",
+        "category": "Thể thao",
+        "content": "Sáng nay (22/3), Bộ trưởng Giáo dục và Đào tạo Nguyễn Kim Sơn đã chủ trì buổi làm việc với Ủy ban nhân dân thành phố Đà Nẵng về công tác chuẩn bị, tổ chức Đại hội Thể thao học sinh Đông Nam Á lần thứ 13 năm 2024. Phát biểu tại buổi làm việc, Chủ tịch Ủy ban nhân dân thành phố Đà Nẵng Lê Trung Chinh cho biết, thành phố Đà Nẵng xác định đây là nhiệm vụ quan trọng. Vì vậy, thời gian qua, Ủy ban nhân dân thành phố và các sở, ban, ngành đã phối hợp đoàn công tác của Bộ triển khai các công việc chuẩn bị cho đại hội như: kiểm tra các địa điểm, thiết bị phục vụ tổ chức thi đấu 6 môn thể thao của đại hội; khảo sát nơi ở cho các đoàn tham gia đại hội; kịch bản tổ chức lễ khai mạc, bế mạc. Đến thời điểm hiện tại, về cơ bản, Đà Nẵng đã chuẩn bị sẵn sàng các điều kiện về cơ sở vật chất, địa điểm, thiết bị tập luyện và thi đấu, công tác vệ sinh, an toàn thực phẩm, an ninh trật tự, công tác hậu cần… để bảo đảm cho đại hội diễn ra thành công. Thành phố đã chủ động xây dựng các phương án để chủ động trong việc tổ chức lưu trú đối với các đoàn vận động viên tham dự đại hội.Theo Phó Chủ tịch Ủy ban nhân dân thành phố Trần Chí Cường, tuy Đà Nẵng không thiếu phòng lưu trú, nhưng để đáp ứng điều kiện về an ninh, tổ chức đưa đón vận động viên đến các điểm thi đấu thì khách sạn buộc phải ở những khu vực không quá xa trung tâm. Chính vì vậy, thành phố đã chỉ đạo Sở Du lịch đã làm việc với các khách sạn, đề nghị hỗ trợ về giá thuê phòng, tạo điều kiện tốt nhất cho Đại hội."
+    }
+]
