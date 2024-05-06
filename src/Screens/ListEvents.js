@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import CategoryTextSlider from '../Components/CategoryTextSlider'
 import Colors from '../color';
 import { AntDesign } from '@expo/vector-icons';
@@ -16,24 +16,19 @@ function ListEvents() {
     useEffect(() => {
         setEvents(dataEv);
       }, []);
-    
-      useEffect(() => {
-        
-        console.log('events', events)
-      }, [events]);
-      
+       
 
     return (
         <View style={{backgroundColor:Colors.white}}>
-            <View style={styles.container_title}>
+            <SafeAreaView style={styles.container_title}>
                 <TouchableOpacity onPress={()=>navigation.navigate("home")}>
                     <AntDesign name="left" size={23} color="white" />
                 </TouchableOpacity>
 
                 <Text style={styles.title}>Sự kiện</Text>
-            </View>
+            </SafeAreaView>
             <Search dataEv = {events} setDataEv={setEvents}/>
-            {/* <CategoryTextSlider /> */}
+            <CategoryTextSlider dataEv = {events} setDataEv={setEvents}/>
             <ListEv dataEv = {events} setDataEv={setEvents}/>
         </View>
     )

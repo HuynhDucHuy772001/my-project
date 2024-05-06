@@ -1,82 +1,82 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Colors from '../color'
+import data from '../../Events.json'
 
-function CategoryTextSlider() {
+function CategoryTextSlider(props) {
+    const { dataEv, setDataEv } = props;
 
-    const [active,setActive]=useState(1)
-    const categoryList=[
+    const [active, setActive] = useState(1);
+    const categoryList = [
         {
-            id:1,
+            id: 1,
             name: 'Tất cả'
         },
         {
-            id:2,
+            id: 2,
             name: 'Lễ hội - Vui chơi'
         },
         {
-            id:3,
-            name: 'Giáo dục'
+            id: 3,
+            name: 'Giáo dục - Thể thao'
         },
         {
-            id:4,
+            id: 4,
             name: 'Chính trị'
         },
         {
-            id:5,
-            name: 'Văn hóa'
-        },
-        {
-            id:6,
-            name: 'Xã hội'
-        },
-        {
-            id:7,
-            name: 'Khác'
-        },
-    ]
+            id: 5,
+            name: 'Văn hóa - Xã hội'
+        }
+    ];
 
-    const onCategoryClick=(id)=>{
-        setActive(id)
-    }
+    const onCategoryClick = (id) => {
+        setActive(id);
+        if (id === 1) {   
+            setDataEv(data);
+        } else {
+            const filteredData = data.filter(event => event.category == categoryList[id - 1].name);
+            setDataEv(filteredData);
+        }
+    };
 
     return (
-        <View style={{marginLeft:"1%"}}>
+        <View style={{ marginLeft: "1%" }}>
             <FlatList
-            data={categoryList}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            renderItem={({item})=>(
-                <TouchableOpacity onPress={()=>onCategoryClick(item.id)}>
-                    <Text style={
-                        item.id==active?styles.catagory_select 
-                        :styles.catagory_unselect}>{item.name}</Text>
-                </TouchableOpacity>
-            )}
+                data={categoryList}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                renderItem={({ item }) => (
+                    <TouchableOpacity onPress={() => onCategoryClick(item.id)}>
+                        <Text style={
+                            item.id == active ? styles.category_select
+                                : styles.category_unselect}>{item.name}</Text>
+                    </TouchableOpacity>
+                )}
             />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    catagory_unselect: {
-        marginRight:20, 
-        fontSize:18, 
-        fontWeight:'bold', 
+    category_unselect: {
+        marginRight: 20,
+        fontSize: 18,
+        fontWeight: 'bold',
         backgroundColor: Colors.white,
-        color: Colors.silver, 
+        color: Colors.silver,
         padding: 8,
         borderRadius: 10,
         borderWidth: 1,
         borderColor: Colors.silver,
     },
 
-    catagory_select: {
-        marginRight:20, 
-        fontSize:18, 
-        fontWeight:'bold', 
+    category_select: {
+        marginRight: 20,
+        fontSize: 18,
+        fontWeight: 'bold',
         backgroundColor: Colors.main,
-        color: Colors.white, 
+        color: Colors.white,
         padding: 8,
         borderRadius: 10,
         borderWidth: 1,
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CategoryTextSlider
+export default CategoryTextSlider;

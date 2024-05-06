@@ -40,12 +40,12 @@ function ListEv(props) {
 
     // }, []);
 
-    useEffect(() => {
-        setDataEv(dataEv);
-    }, []);
+    // useEffect(() => {
+    //     setDataEv(dataEv);
+    // }, []);
 
     return (
-        <FlatList style={{ height: '78%' }}
+        <FlatList style={{ height: '79%' }}
             data={dataEv}
             renderItem={({item,id}) => (//View List
 

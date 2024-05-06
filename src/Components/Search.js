@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import data from '../../Events.json'
 
 function Search(props) {
   const { dataEv, setDataEv } = props;
-  const [initialEvents, setInitialEvents] = useState([]);
-
-  useEffect(() => {
-    setInitialEvents(dataEv);
-  }, []);
 
   const handleSearch = (text) => {
     if (text === '') {
-      setDataEv(initialEvents);
+      setDataEv(data);
     } else {
       const filteredEvents = dataEv.filter((s) =>
         s.title.toLowerCase().includes(text.toLowerCase())
@@ -63,4 +59,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search;
+export default Search; 
