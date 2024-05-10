@@ -45,7 +45,7 @@ function ListEv(props) {
     // }, []);
 
     return (
-        <FlatList style={{ height: '79%' }}
+        <FlatList style={{ height: '100%', width:"100%" }}
             data={dataEv}
             renderItem={({item,id}) => (//View List
 
@@ -64,9 +64,9 @@ function ListEv(props) {
                             <Text style={{ color: "black", marginLeft: "3%"}}>{item.time}</Text>
                         </View>
 
-                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', width:"90%" }}>
                             <MaterialCommunityIcons name="map-marker-outline" size={20} color="black" style={{ marginLeft: "2%", marginTop: "0.5%" }} />
-                            <Text style={{ color: "black", marginLeft: "2%", marginTop:"0.5%" }}>{item.place}</Text>
+                            <Text style={{ color: "black", marginLeft: "2%", marginTop:"0.5%",width: Dimensions.get('screen').width * 0.56 }}>{item.place}</Text>
                         </View>
 
                         <Text style={{ color: Colors.main, textAlign:'right'}}>{item.category}</Text>

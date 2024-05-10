@@ -1,18 +1,24 @@
 import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { Dimensions, StyleSheet, TextInput, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import data from '../../Events.json'
 
+function removeDiacritics(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 function Search(props) {
   const { dataEv, setDataEv } = props;
-
+  
   const handleSearch = (text) => {
     if (text === '') {
       setDataEv(data);
     } else {
-      const filteredEvents = dataEv.filter((s) =>
-        s.title.toLowerCase().includes(text.toLowerCase())
-      );
+      const keywordWithoutDiacritics = removeDiacritics(text.toLowerCase());
+      const filteredEvents = dataEv.filter((s) => {
+        const eventTitleWithoutDiacritics = removeDiacritics(s.title.toLowerCase());
+        return eventTitleWithoutDiacritics.includes(keywordWithoutDiacritics);
+      });
       setDataEv(filteredEvents);
     }
   };
@@ -56,6 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     color: 'black',
+    height: Dimensions.get('screen').height * 0.04
   },
 });
 

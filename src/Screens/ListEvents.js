@@ -8,6 +8,7 @@ import ListEv from '../Components/ListEv';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import dataEv from "../../Events.json"
+import Time from '../Components/Time';
 
 function ListEvents() {
     const navigation=useNavigation();
@@ -19,18 +20,19 @@ function ListEvents() {
        
 
     return (
-        <View style={{backgroundColor:Colors.white}}>
-            <SafeAreaView style={styles.container_title}>
+        <SafeAreaView style={{backgroundColor:Colors.white, flex:1}}>
+            <View style={styles.container_title}>
                 <TouchableOpacity onPress={()=>navigation.navigate("home")}>
                     <AntDesign name="left" size={23} color="white" />
                 </TouchableOpacity>
 
                 <Text style={styles.title}>Sự kiện</Text>
-            </SafeAreaView>
+            </View>
             <Search dataEv = {events} setDataEv={setEvents}/>
-            <CategoryTextSlider dataEv = {events} setDataEv={setEvents}/>
+            <CategoryTextSlider dataEv = {events} setDataEv={setEvents} />
+            <Time dataEv = {events} setDataEv={setEvents}/>
             <ListEv dataEv = {events} setDataEv={setEvents}/>
-        </View>
+        </SafeAreaView>
     )
 }
 

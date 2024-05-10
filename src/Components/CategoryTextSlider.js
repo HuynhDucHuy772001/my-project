@@ -35,18 +35,18 @@ function CategoryTextSlider(props) {
         if (id === 1) {   
             setDataEv(data);
         } else {
-            const filteredData = data.filter(event => event.category == categoryList[id - 1].name);
+            const  filteredData = data.filter(event => event.category == categoryList[id - 1].name);
             setDataEv(filteredData);
         }
     };
 
     return (
-        <View style={{ marginLeft: "1%" }}>
+        <View style={{ marginLeft:8, marginHorizontal:"3%" }}>
             <FlatList
                 data={categoryList}
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                renderItem={({ item }) => (
+                renderItem={({item}) => (
                     <TouchableOpacity onPress={() => onCategoryClick(item.id)}>
                         <Text style={
                             item.id == active ? styles.category_select
