@@ -3,12 +3,12 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import CategoryTextSlider from '../Components/CategoryTextSlider'
 import Colors from '../color';
 import { AntDesign } from '@expo/vector-icons';
-import Search from '../Components/Search';
 import ListEv from '../Components/ListEv';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
-import dataEv from "../../Events.json"
+import dataEv from "../../Events.json";
 import Time from '../Components/Time';
+import SearchAndCategory from '../Components/SearchAndCategory';
 
 function ListEvents() {
     const navigation=useNavigation();
@@ -28,8 +28,9 @@ function ListEvents() {
 
                 <Text style={styles.title}>Sự kiện</Text>
             </View>
-            <Search dataEv = {events} setDataEv={setEvents}/>
-            <CategoryTextSlider dataEv = {events} setDataEv={setEvents} />
+            <SearchAndCategory dataEv = {events} setDataEv={setEvents}/>
+            {/* <Search dataEv = {events} setDataEv={setEvents}/>
+            <CategoryTextSlider dataEv = {events} setDataEv={setEvents} /> */}
             <Time dataEv = {events} setDataEv={setEvents}/>
             <ListEv dataEv = {events} setDataEv={setEvents}/>
         </SafeAreaView>
