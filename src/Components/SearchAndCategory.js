@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Dimensions, StyleSheet, TextInput, View, FlatList, Text, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import Colors from '../color';
@@ -10,6 +10,8 @@ function removeDiacritics(str) {
 
 function filterSearchAndCategory(props) {
   const { dataEv, setDataEv } = props;
+
+  const searchTimeoutRef = useRef(null);
 
   const [active, setActive] = useState(1);
   const categoryList = [
@@ -36,16 +38,24 @@ function filterSearchAndCategory(props) {
   ];
 
   const handleSearch = (text) => {
+    clearTimeout(searchTimeoutRef.current);
     if (text === '') {
-      setDataEv(data);
-      setActive(1);
+      if (active === 1) {
+        setDataEv(data);
+      } else {
+        const filteredData = data.filter(event => event.category === categoryList[active - 1].name);
+        setDataEv(filteredData);
+      }
     } else {
       const keywordWithoutDiacritics = removeDiacritics(text.toLowerCase());
-      const filteredEvents = dataEv.filter((s) => {
-        const eventTitleWithoutDiacritics = removeDiacritics(s.title.toLowerCase());
-        return eventTitleWithoutDiacritics.includes(keywordWithoutDiacritics);
-      });
-      setDataEv(filteredEvents);
+      searchTimeoutRef.current = setTimeout(() => {
+        const filteredEvents = data.filter((event) => {
+          const eventTitleWithoutDiacritics = removeDiacritics(event.title.toLowerCase());
+          const categoryMatch = active === 1 || event.category === categoryList[active - 1].name;
+          return categoryMatch && eventTitleWithoutDiacritics.includes(keywordWithoutDiacritics);
+        });
+        setDataEv(filteredEvents);
+      }, 600)
     }
   };
 
@@ -125,7 +135,7 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: Colors.silver,
+   borderColor: Colors.silver,
   },
   category_select: {
     marginRight: 20,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { } from 'react'
 import { Dimensions, FlatList, Image, Text, TouchableOpacity, View } from 'react-native'
 import Colors from '../color';
 import { useNavigation } from '@react-navigation/native';
@@ -38,10 +38,6 @@ function ListEv(props) {
     // useEffect(() => {
     //     getAPI();
 
-    // }, []);
-
-    // useEffect(() => {
-    //     setDataEv(dataEv);
     // }, []);
 
     return (

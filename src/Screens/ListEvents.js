@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import CategoryTextSlider from '../Components/CategoryTextSlider'
 import Colors from '../color';
 import { AntDesign } from '@expo/vector-icons';
 import ListEv from '../Components/ListEv';
@@ -16,7 +15,7 @@ function ListEvents() {
 
     useEffect(() => {
         setEvents(dataEv);
-      }, []);
+      }, [dataEv]);
        
 
     return (
@@ -29,8 +28,6 @@ function ListEvents() {
                 <Text style={styles.title}>Sự kiện</Text>
             </View>
             <SearchAndCategory dataEv = {events} setDataEv={setEvents}/>
-            {/* <Search dataEv = {events} setDataEv={setEvents}/>
-            <CategoryTextSlider dataEv = {events} setDataEv={setEvents} /> */}
             <Time dataEv = {events} setDataEv={setEvents}/>
             <ListEv dataEv = {events} setDataEv={setEvents}/>
         </SafeAreaView>
