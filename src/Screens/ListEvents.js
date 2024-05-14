@@ -19,7 +19,7 @@ function ListEvents() {
        
 
     return (
-        <SafeAreaView style={{backgroundColor:Colors.white, flex:1}}>
+        <SafeAreaView style={{backgroundColor:"#F5F5F5", flex:1}}>
             <View style={styles.container_title}>
                 <TouchableOpacity onPress={()=>navigation.navigate("home")}>
                     <AntDesign name="left" size={23} color="white" />

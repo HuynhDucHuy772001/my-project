@@ -80,7 +80,7 @@ function filterSearchAndCategory(props) {
           onChangeText={handleSearch}
         />
       </View>
-      <View style={{ marginLeft: 8, marginHorizontal: "3%" }}>
+      <View style={{ marginLeft: 5, marginHorizontal: "2%" }}>
         <FlatList
           data={categoryList}
           horizontal
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingHorizontal: 10,
     paddingVertical: 5,
-    marginHorizontal: 10,
+    marginHorizontal: 5,
     marginVertical: 8,
     borderRadius: 10,
     shadowColor: '#000',
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     height: Dimensions.get('screen').height * 0.04
   },
   category_unselect: {
-    marginRight: 20,
+    marginRight: 8,
     fontSize: 18,
     fontWeight: 'bold',
     backgroundColor: Colors.white,
@@ -135,10 +135,10 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 10,
     borderWidth: 1,
-   borderColor: Colors.silver,
+    borderColor: Colors.silver,
   },
   category_select: {
-    marginRight: 20,
+    marginRight: 8,
     fontSize: 18,
     fontWeight: 'bold',
     backgroundColor: Colors.main,
